@@ -1,0 +1,4 @@
+ascon==0.0.9
+cryptography==42.0.7
+cryptomite==0.1.2
+pycryptodome==3.20.0
