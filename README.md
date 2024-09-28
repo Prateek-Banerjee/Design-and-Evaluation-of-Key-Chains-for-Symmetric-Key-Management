@@ -1,27 +1,29 @@
-# Research_Project Prateek_Banerjee Design_and_Evaluation_of_Key_Chains_for_Symmetric_Key Management
+## Overview of the Contents of the Different Folders
+1) [Cryptographic Primitives](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/tree/master/cryptographicprimitives): This folder comprises of the interface for the different operations of each cryptographic primitives namely [`hkdf_operations.py`](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/cryptographicprimitives/hkdf_operations.py), [`xdrbg_operations.py`](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/cryptographicprimitives/xdrbg_operations.py), and [`prg_operations.py`](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/cryptographicprimitives/prg_operations.py)  according to **Algorithm 1**, **Algorithm 2**, and **Algorithm 3** respectively from the ***chapters 2 and 3*** of the [report](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/Research%20Project%20Report.pdf).
 
-This repository comprises of all the documents generated during the research project done by Prateek Banerjee under the supervision of Professor David Schatz.
+2) [Entropy Loss Detection](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/tree/master/entropylossdetection): This folder comprises the code for the sound and unsound idealizations required for the detection of entropy loss based on the ***chapter 5*** of the [report](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/Research%20Project%20Report.pdf).
 
-# Cryptographic Key Chain Evaluation
-This directory contains the complete code base which includes:
-1) [Cryptographic Primitives](https://github.com/Prateek-Banerjee/Master-s-Curriculum-Individual-Studies/tree/main/5th%20Sem/Research%20Project/Cryptographic%20Key%20Chain%20Evaluation/cryptographicprimitives): This folder comprises of the interface for the different operations of each cryptographic primitives namely [`hkdf_operations.py`](https://github.com/Prateek-Banerjee/Master-s-Curriculum-Individual-Studies/blob/main/5th%20Sem/Research%20Project/Cryptographic%20Key%20Chain%20Evaluation/cryptographicprimitives/hkdf_operations.py), [`xdrbg_operations.py`](https://github.com/Prateek-Banerjee/Master-s-Curriculum-Individual-Studies/blob/main/5th%20Sem/Research%20Project/Cryptographic%20Key%20Chain%20Evaluation/cryptographicprimitives/xdrbg_operations.py), [`prg_operations.py`](https://github.com/Prateek-Banerjee/Master-s-Curriculum-Individual-Studies/blob/main/5th%20Sem/Research%20Project/Cryptographic%20Key%20Chain%20Evaluation/cryptographicprimitives/prg_operations.py) according to **Algorithm 1**, **Algorithm 2**, and **Algorithm 3** respectively from the ***chapters 2 and 3*** of the [report](https://github.com/Prateek-Banerjee/Master-s-Curriculum-Individual-Studies/blob/main/5th%20Sem/Research%20Project/Report/first%20draft%20of%20project%20report.pdf).
+2) [Key Chains](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/tree/master/keychains): This folder comprises the code for the key chain generation using each of the [cryptographic primitives](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/tree/master/cryptographicprimitives) according to the **Fig. 4.1**, **Fig. 4.2**, and **Fig. 4.3** of the ***chapter 4*** of the [report](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/Research%20Project%20Report.pdf).
 
-2) [Key Chains](https://github.com/Prateek-Banerjee/Master-s-Curriculum-Individual-Studies/tree/main/5th%20Sem/Research%20Project/Cryptographic%20Key%20Chain%20Evaluation/keychains): This folder comprises the code for the key chain generation using each of the [cryptographic primitives](https://github.com/Prateek-Banerjee/Master-s-Curriculum-Individual-Studies/tree/main/5th%20Sem/Research%20Project/Cryptographic%20Key%20Chain%20Evaluation/cryptographicprimitives) according to the **Fig. 4.1** of the ***chapter 4*** of the [report](https://github.com/Prateek-Banerjee/Master-s-Curriculum-Individual-Studies/blob/main/5th%20Sem/Research%20Project/Report/first%20draft%20of%20project%20report.pdf).
+3) [Tests](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/tree/master/tests): This folder comprises of some basic tests for the individual cryptographic primitives from [Cryptographic Primitives](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/tree/master/cryptographicprimitives).
 
-3) The file [`benchmark_key_generation.py`](https://github.com/Prateek-Banerjee/Master-s-Curriculum-Individual-Studies/blob/main/5th%20Sem/Research%20Project/Cryptographic%20Key%20Chain%20Evaluation/benchmark_key_chain_generation.py) comprises of the code for conducting the performance evaluation.
 
-4) [Console Screenshots](https://github.com/Prateek-Banerjee/Master-s-Curriculum-Individual-Studies/tree/main/5th%20Sem/Research%20Project/Cryptographic%20Key%20Chain%20Evaluation/Console%20Screeenshots): This folder comprises of the screenshots for verifying the execution times mentioned in the ***chapter 5*** of the [report](https://github.com/Prateek-Banerjee/Master-s-Curriculum-Individual-Studies/blob/main/5th%20Sem/Research%20Project/Report/first%20draft%20of%20project%20report.pdf).
+## Other Important Files
+1) The file [`benchmark_key_generation.py`](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/benchmark_key_chain_generation.py) comprises of the code for conducting the performance evaluation.
+
+2) The file [`entropy_loss_detection.py`](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/entropy_loss_detection.py) comprises the code executing the idealizations required for the detection of entropy loss.
+
+3) The file [`timings_for_key_chain_instantiation.py`](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/timings_for_key_chain_instantiation.py) comprises the code for checking the execution times for the key chain instantiation using different cryptographic primitives.
 
 ## Installing the External Python Modules
-Open any command line interface (like CMD on Windows) and traverse to the directory where you have downloaded the [`requirements.txt`](https://github.com/Prateek-Banerjee/Master-s-Curriculum-Individual-Studies/blob/main/5th%20Sem/Research%20Project/Cryptographic%20Key%20Chain%20Evaluation/requirements.txt) file and then execute the below command.
+Open any command line interface (like CMD on Windows) and traverse to the directory where you have downloaded the [`requirements.txt`](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/requirements.txt) file and then execute the below command.
 ```bash 
 pip install -r requirements.txt
 ```
 ## Database Setup
-Download the [DB Browser for SQLite](https://sqlitebrowser.org/dl/). We have used the *64-bit* Windows installer. We encourage a user to use the [`Table Creation Script.sql`](https://github.com/Prateek-Banerjee/Master-s-Curriculum-Individual-Studies/blob/main/5th%20Sem/Research%20Project/Cryptographic%20Key%20Chain%20Evaluation/Database%20Table%20Create%20Script.sql) at first, and then proceed with (let's say) executing the [`benchmark_key_generation.py`](https://github.com/Prateek-Banerjee/Master-s-Curriculum-Individual-Studies/blob/main/5th%20Sem/Research%20Project/Cryptographic%20Key%20Chain%20Evaluation/benchmark_key_chain_generation.py) on their own system.
+Download the [DB Browser for SQLite](https://sqlitebrowser.org/dl/). We have used the *64-bit* Windows installer. We encourage a user to use the [`Table Creation Script.sql`](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/Database%20Table%20Create%20Script.sql) at first, and then proceed with (let's say) executing the [`benchmark_key_generation.py`](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/benchmark_key_chain_generation.py) on their own system.
 
-## Test Execution in the [tests](https://github.com/Prateek-Banerjee/Master-s-Curriculum-Individual-Studies/tree/main/5th%20Sem/Research%20Project/Cryptographic%20Key%20Chain%20Evaluation/tests) Directory
-
+## For test Execution in the [tests](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/tree/master/tests) Directory
 Paste the below section in your (VS Code) settings.json file.
 ```
 "python.testing.unittestArgs": [
@@ -34,3 +36,13 @@ Paste the below section in your (VS Code) settings.json file.
 "python.testing.pytestEnabled": false,
 "python.testing.unittestEnabled": true
 ```
+
+### Additional Information
+
+There is a boolean flag in [`hkdf_operations.py`](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/cryptographicprimitives/hkdf_operations.py) and [`xdrbg_operations.py`](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/cryptographicprimitives/xdrbg_operations.py) mentioned as:
+
+```
+IS_PERFORMANCE_BENCHMARKING_DONE: bool = True
+```
+
+This is set to **True** by default, which skips the checks of the fulfillment criteria of the parameters during benchmarking for the HKDF and the XDRBG based on what is mentioned in *Table 4.2* and *Table 4.4* respectively in the ***chapter 4*** of the [report](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/Research%20Project%20Report.pdf) as we are only executing those scripts when we are conducting the benchmark using the [`benchmark_key_generation.py`](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/benchmark_key_chain_generation.py). But, if the keychain is to be used for some other purposes later on or if the tests are to be executed from the [tests](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/tree/master/tests) directory, **we request you to set this flag to *False*** to ensure that the proper parameter checks are also being conducted to uphold the security of the cryptographic primitives and to ensure that the tests are also being executed successfully.
