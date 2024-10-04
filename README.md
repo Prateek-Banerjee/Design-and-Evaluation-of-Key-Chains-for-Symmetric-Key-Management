@@ -19,7 +19,7 @@ This has only been produced as a research tool and is meant to be used for proto
 3) The file [`timings_for_key_chain_instantiation.py`](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/timings_for_key_chain_instantiation.py) comprises the code for checking the execution times for the key chain instantiation using different cryptographic primitives.
 
 ## Installing the External Python Modules
-Open any command line interface (like CMD on Windows) and traverse to the directory where you have downloaded the [`requirements.txt`](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/requirements.txt) file and then execute the below command.
+Open any Command Line Interface (CLI) and traverse to the directory where you have downloaded the [`requirements.txt`](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/requirements.txt) file and then execute the below command.
 ```bash 
 pip install -r requirements.txt
 ```
