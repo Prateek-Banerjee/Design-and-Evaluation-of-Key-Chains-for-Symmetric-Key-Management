@@ -1,5 +1,5 @@
 ## Disclaimer
-This has only been produced as a research tool and is meant to be used for prototyping. It has not been sufficiently vetted for use in security-critical production environments. So, all implementations are to be considered experimental.
+This has only been produced as a research tool and is meant to be used for prototyping. It has not been sufficiently vetted for use in security-critical production environments. So, all implementations are to be considered experimental. An implementation in Rust is also available at [keychains_rs](https://github.com/Prateek-Banerjee/Cryptographic_Keychains).
 
 ## Overview of the Contents of the Different Folders
 1) [Cryptographic Primitives](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/tree/master/cryptographicprimitives): This folder comprises of the interface for the different operations of each cryptographic primitives namely [`hkdf_operations.py`](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/cryptographicprimitives/hkdf_operations.py), [`xdrbg_operations.py`](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/cryptographicprimitives/xdrbg_operations.py), and [`prg_operations.py`](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/cryptographicprimitives/prg_operations.py)  according to **Algorithm 1**, **Algorithm 2**, and **Algorithm 3** respectively from the ***chapters 2 and 3*** of the [report](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/Research%20Project%20Report.pdf).
@@ -10,6 +10,40 @@ This has only been produced as a research tool and is meant to be used for proto
 
 3) [Tests](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/tree/master/tests): This folder comprises of some basic tests for the individual cryptographic primitives from [Cryptographic Primitives](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/tree/master/cryptographicprimitives).
 
+## Usage
+
+```bash
+from hashlib import sha256
+from keychains.hkdf_keychain import HkdfKeyChain
+from keychains.utils import generate_random_input_parameter_for_hkdf
+
+if __name__ == "__main__":
+    hash_func = sha256
+    hash_func_name = hash_func.__name__
+
+    hkdf_kc_obj = HkdfKeyChain(hash_func, store_persistently=False)
+
+    initial_skm: bytes = generate_random_input_parameter_for_hkdf(
+        hash_func_name)
+
+    kc_init_state: bytes = hkdf_kc_obj.key_chain_instantiate(initial_skm)
+
+    input_param_1 = generate_random_input_parameter_for_hkdf(hash_func_name)
+
+    new_state_1, output_key_1 = hkdf_kc_obj.key_chain_update(
+        input_param_1, kc_init_state)
+
+    print(f"First Key in the key chain using {hash_func_name}: {output_key_1}")
+
+    input_param_2 = generate_random_input_parameter_for_hkdf(hash_func_name)
+
+    new_state_2, output_key_2 = hkdf_kc_obj.key_chain_update(
+        input_param_2, kc_init_state)
+
+    print(
+        f"Second Key in the key chain using {hash_func_name}: {output_key_2}")
+
+```
 
 ## Other Important Files
 1) The file [`benchmark_key_generation.py`](https://github.com/Prateek-Banerjee/Design-and-Evaluation-of-Key-Chains-for-Symmetric-Key-Management/blob/master/benchmark_key_chain_generation.py) comprises of the code for conducting the performance evaluation.
